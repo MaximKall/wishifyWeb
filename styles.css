@@ -1,0 +1,230 @@
+:root {
+    --primary-color: #074b43;
+    --text-color: #333;
+    --background-color: #fffaf0;
+    --link-color: #fffaf0;
+    --link-hover-color: #fffaf0cc;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.coming-soon {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--background-color);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--background-color);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.coming-soon p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-container {
+    margin-top: 2rem;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    transform: translateY(-3px);
+}
+
+.cta-button i {
+    margin-right: 8px;
+}
+
+footer {
+    background-color: var(--background-color);
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+}
+
+.coming-soon footer {
+    background-color: transparent;
+    color: var(--background-color);
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    margin: 0 0.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.coming-soon .footer-links a {
+    color: var(--background-color);
+}
+
+.coming-soon .footer-links a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Styles for legal pages */
+.legal-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.legal-content h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.legal-content h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.legal-content p {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .coming-soon p {
+        font-size: 1.2rem;
+    }
+
+    .legal-content h1 {
+        font-size: 2rem;
+    }
+
+    .legal-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 620px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .coming-soon p {
+        font-size: 1rem;
+    }
+
+    .legal-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .legal-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .coming-soon .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coming-soon .footer-links a {
+        margin: 0.5rem 0;
+    }
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+.cta-container a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}

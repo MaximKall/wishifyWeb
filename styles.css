@@ -2,8 +2,8 @@
     --primary-color: #074b43;
     --text-color: #333;
     --background-color: #fffaf0;
-    --link-color: #fffaf0;
-    --link-hover-color: #fffaf0cc;
+    --link-color: #074b43; /* Changed from #fffaf0 to match primary color */
+    --link-hover-color: #0a7268; /* Slightly lighter shade for hover */
 }
 
 html {
@@ -92,12 +92,14 @@ h2 {
     border-radius: 30px;
     font-weight: 600;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #fff;
+    background-color: var(--link-hover-color);
+    color: var(--background-color);
     transform: translateY(-3px);
+    text-decoration: none;
 }
 
 .cta-button i {
@@ -122,9 +124,9 @@ footer {
 
 .footer-links a {
     margin: 0 0.5rem;
-    color: var(--text-color);
+    color: inherit;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .coming-soon .footer-links a {
@@ -132,7 +134,15 @@ footer {
 }
 
 .coming-soon .footer-links a:hover {
+    color: var(--background-color);
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.footer-links a:hover {
     color: var(--link-hover-color);
+    opacity: 0.8;
+    text-decoration: underline;
 }
 
 /* Styles for legal pages */
@@ -224,7 +234,20 @@ a:hover {
     text-decoration: underline;
 }
 
-.cta-container a:hover {
-    color: var(--primary-color);
+.coming-soon a {
+    color: var(--background-color);
+}
+
+.coming-soon a:hover {
+    color: var(--background-color);
+    opacity: 0.8;
     text-decoration: none;
+}
+
+.coming-soon .cta-button {
+    color: var(--primary-color);
+}
+
+.coming-soon .cta-button:hover {
+    color: var(--background-color);
 }

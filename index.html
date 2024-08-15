@@ -3,33 +3,47 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Wishify - Coming Soon</title>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="styles.css" />
-        <script src="https://unpkg.com/feather-icons"></script>
-    </head>
-    <body class="coming-soon">
-        <main>
-            <section id="hero">
-                <h1>Wishify</h1>
-                <p>Your wishes are about to come true...</p>
-                <div class="cta-container">
-                    <a href="https://twitter.com/maxim_kallina" class="cta-button" target="_blank" rel="noopener noreferrer"
-                        ><i data-feather="twitter" style="padding-right: 10px"></i>Follow for Updates</a
-                    >
-                </div>
-            </section>
-        </main>
-        <footer>
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="termsofservice.html">Terms of Service</a>
-                <a href="eula.html">End User License Agreement</a>
-            </div>
-            <p>&copy; 2024 <a href="https://maximilian.sh">Maximilian Kallina</a>. All rights reserved.</p>
-        </footer>
+        <title>Wishify - Language Redirect</title>
         <script>
-            feather.replace();
+            function getLanguage() {
+                var lang = navigator.language || navigator.userLanguage;
+                return lang.toLowerCase().split("-")[0];
+            }
+
+            function redirect() {
+                var lang = getLanguage();
+                if (lang === "de") {
+                    window.location.href = "de/index.html";
+                } else {
+                    window.location.href = "en/index.html";
+                }
+            }
+
+            // Redirect on page load
+            window.onload = redirect;
+        </script>
+    </head>
+    <body>
+        <noscript>
+            <p>Please enable JavaScript to be redirected to the appropriate language version.</p>
+            <p>Bitte aktivieren Sie JavaScript, um zur entsprechenden Sprachversion weitergeleitet zu werden.</p>
+            <ul>
+                <li><a href="en/index.html">English</a></li>
+                <li><a href="de/index.html">Deutsch</a></li>
+            </ul>
+        </noscript>
+        <div id="manual-redirect" style="display: none; text-align: center; padding: 20px">
+            <p>If you are not redirected automatically, please choose your language:</p>
+            <ul style="list-style-type: none; padding: 0">
+                <li><a href="en/index.html">English</a></li>
+                <li><a href="de/index.html">Deutsch</a></li>
+            </ul>
+        </div>
+        <script>
+            // Show manual redirect links after a delay
+            setTimeout(function () {
+                document.getElementById("manual-redirect").style.display = "block";
+            }, 3000); // Show after 3 seconds
         </script>
     </body>
 </html>

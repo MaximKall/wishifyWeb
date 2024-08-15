@@ -50,6 +50,10 @@ nav {
     text-decoration: none;
 }
 
+.logo:hover {
+    color: var(--primary-color);
+}
+
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -157,6 +161,14 @@ footer {
 
 .legal-content p {
     margin-bottom: 1rem;
+}
+
+.link {
+    color: var(--text-color);
+}
+
+.link:hover {
+    color: var(--text-color);
 }
 
 @media (max-width: 768px) {
